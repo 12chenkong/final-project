@@ -1,5 +1,6 @@
 package com.chan.finalproject.service;
 
+import com.chan.finalproject.dto.CustomerRespone;
 import com.chan.finalproject.dto.OrderRequest;
 import com.chan.finalproject.model.Customer;
 import com.chan.finalproject.model.Product;
@@ -38,6 +39,10 @@ public class CustomerService {
       customer.get().setGender(orderRequest.getCustomer().getGender());
       customer.get().setProduct(orderRequest.getCustomer().getProduct());
       return customer;
+  }
+
+  public List<CustomerRespone> fetchCusOnly(){
+    return customerRepo.fetchCusOnly();
   }
 
 
