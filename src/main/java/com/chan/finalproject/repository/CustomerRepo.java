@@ -12,4 +12,5 @@ import java.util.List;
 public interface CustomerRepo extends JpaRepository<Customer,Integer> {
         @Query("SELECT new  com.chan.finalproject.dto.CustomerRespone(c.name,c.gender,c.email) FROM Customer c  ")
         List<CustomerRespone> fetchCusOnly();
+
 }
